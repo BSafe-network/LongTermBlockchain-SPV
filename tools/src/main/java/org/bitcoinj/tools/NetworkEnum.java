@@ -21,5 +21,8 @@ public enum NetworkEnum {
     PROD, // alias for MAIN
     TEST,
     REGTEST,
-    BSAFENET
+    BSAFENET,
+    BSAFENETLT1,
+    BSAFENETLT2,
+    BSAFENETLT3
 }

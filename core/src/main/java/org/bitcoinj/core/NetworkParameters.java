@@ -60,6 +60,9 @@ public abstract class NetworkParameters {
     /** Unit test network. */
     public static final String ID_UNITTESTNET = "org.bitcoinj.unittest";
     public static final String ID_BSAFENET = "network.bsafe";
+    public static final String ID_BSAFENETLT1 = "network.bsafelt1";
+    public static final String ID_BSAFENETLT2 = "network.bsafelt2";
+    public static final String ID_BSAFENETLT3 = "network.bsafelt3";
 
     /** The string used by the payment protocol to represent the main net. */
     public static final String PAYMENT_PROTOCOL_ID_MAINNET = "main";
@@ -69,6 +72,9 @@ public abstract class NetworkParameters {
     public static final String PAYMENT_PROTOCOL_ID_UNIT_TESTS = "unittest";
     public static final String PAYMENT_PROTOCOL_ID_REGTEST = "regtest";
     public static final String PAYMENT_PROTOCOL_ID_BSAFENET = "bsafenet";
+    public static final String PAYMENT_PROTOCOL_ID_BSAFENETLT1 = "bsafenetlt1";
+    public static final String PAYMENT_PROTOCOL_ID_BSAFENETLT2 = "bsafenetlt2";
+    public static final String PAYMENT_PROTOCOL_ID_BSAFENETLT3 = "bsafenetlt3";
 
     // TODO: Seed nodes should be here as well.
 
@@ -231,6 +237,12 @@ public abstract class NetworkParameters {
             return RegTestParams.get();
         } else if (id.equals(ID_BSAFENET)) {
             return BSafeNetParams.get();
+        } else if (id.equals(ID_BSAFENETLT1)) {
+            return BSafeNetLT1Params.get();
+        } else if (id.equals(ID_BSAFENETLT2)) {
+            return BSafeNetLT2Params.get();
+        } else if (id.equals(ID_BSAFENETLT3)) {
+            return BSafeNetLT3Params.get();
         } else {
             return null;
         }
@@ -249,6 +261,12 @@ public abstract class NetworkParameters {
             return RegTestParams.get();
         } else if (pmtProtocolId.equals(PAYMENT_PROTOCOL_ID_BSAFENET)) {
             return BSafeNetParams.get();
+        } else if (pmtProtocolId.equals(PAYMENT_PROTOCOL_ID_BSAFENETLT1)) {
+            return BSafeNetLT1Params.get();
+        } else if (pmtProtocolId.equals(PAYMENT_PROTOCOL_ID_BSAFENETLT2)) {
+            return BSafeNetLT2Params.get();
+        } else if (pmtProtocolId.equals(PAYMENT_PROTOCOL_ID_BSAFENETLT3)) {
+            return BSafeNetLT3Params.get();
         } else {
             return null;
         }

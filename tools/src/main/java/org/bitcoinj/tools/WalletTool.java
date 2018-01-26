@@ -20,10 +20,7 @@ package org.bitcoinj.tools;
 import org.bitcoinj.core.*;
 import org.bitcoinj.crypto.*;
 import org.bitcoinj.net.discovery.DnsDiscovery;
-import org.bitcoinj.params.BSafeNetParams;
-import org.bitcoinj.params.MainNetParams;
-import org.bitcoinj.params.RegTestParams;
-import org.bitcoinj.params.TestNet3Params;
+import org.bitcoinj.params.*;
 import org.bitcoinj.protocols.payments.PaymentProtocol;
 import org.bitcoinj.protocols.payments.PaymentProtocolException;
 import org.bitcoinj.protocols.payments.PaymentSession;
@@ -281,6 +278,18 @@ public class WalletTool {
             case BSAFENET:
                 params = BSafeNetParams.get();
                 chainFileName = new File("bsafenet.chain");
+                break;
+            case BSAFENETLT1:
+                params = BSafeNetLT1Params.get();
+                chainFileName = new File("bsafenetlt1.chain");
+                break;
+            case BSAFENETLT2:
+                params = BSafeNetLT2Params.get();
+                chainFileName = new File("bsafenetlt2.chain");
+                break;
+            case BSAFENETLT3:
+                params = BSafeNetLT3Params.get();
+                chainFileName = new File("bsafenetlt3.chain");
                 break;
             default:
                 throw new RuntimeException("Unreachable.");
@@ -1221,6 +1230,7 @@ public class WalletTool {
                     if (s.length == 2) {
                         peers.addAddress(new PeerAddress(params, InetAddress.getByName(s[0]), Integer.parseInt(s[1])));
                     } else {
+                        System.err.println("port: " + params.getPort());
                         peers.addAddress(new PeerAddress(params, InetAddress.getByName(peer)));
                     }
                 } catch (UnknownHostException e) {
