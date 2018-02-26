@@ -24,5 +24,7 @@ public enum NetworkEnum {
     BSAFENET,
     BSAFENETLT1,
     BSAFENETLT2,
-    BSAFENETLT3
+    BSAFENETLT3,
+    BSAFENETLT4,
+    BSAFENETLT5
 }

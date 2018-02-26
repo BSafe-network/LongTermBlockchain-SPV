@@ -291,6 +291,14 @@ public class WalletTool {
                 params = BSafeNetLT3Params.get();
                 chainFileName = new File("bsafenetlt3.chain");
                 break;
+            case BSAFENETLT4:
+                params = BSafeNetLT4Params.get();
+                chainFileName = new File("bsafenetlt4.chain");
+                break;
+            case BSAFENETLT5:
+                params = BSafeNetLT5Params.get();
+                chainFileName = new File("bsafenetlt5.chain");
+                break;
             default:
                 throw new RuntimeException("Unreachable.");
         }

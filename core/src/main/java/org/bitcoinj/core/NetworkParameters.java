@@ -63,6 +63,8 @@ public abstract class NetworkParameters {
     public static final String ID_BSAFENETLT1 = "network.bsafelt1";
     public static final String ID_BSAFENETLT2 = "network.bsafelt2";
     public static final String ID_BSAFENETLT3 = "network.bsafelt3";
+    public static final String ID_BSAFENETLT4 = "network.bsafelt4";
+    public static final String ID_BSAFENETLT5 = "network.bsafelt5";
 
     /** The string used by the payment protocol to represent the main net. */
     public static final String PAYMENT_PROTOCOL_ID_MAINNET = "main";
@@ -75,6 +77,8 @@ public abstract class NetworkParameters {
     public static final String PAYMENT_PROTOCOL_ID_BSAFENETLT1 = "bsafenetlt1";
     public static final String PAYMENT_PROTOCOL_ID_BSAFENETLT2 = "bsafenetlt2";
     public static final String PAYMENT_PROTOCOL_ID_BSAFENETLT3 = "bsafenetlt3";
+    public static final String PAYMENT_PROTOCOL_ID_BSAFENETLT4 = "bsafenetlt4";
+    public static final String PAYMENT_PROTOCOL_ID_BSAFENETLT5 = "bsafenetlt5";
 
     // TODO: Seed nodes should be here as well.
 
@@ -243,6 +247,10 @@ public abstract class NetworkParameters {
             return BSafeNetLT2Params.get();
         } else if (id.equals(ID_BSAFENETLT3)) {
             return BSafeNetLT3Params.get();
+        } else if (id.equals(ID_BSAFENETLT4)) {
+            return BSafeNetLT4Params.get();
+        } else if (id.equals(ID_BSAFENETLT5)) {
+            return BSafeNetLT5Params.get();
         } else {
             return null;
         }
@@ -267,6 +275,10 @@ public abstract class NetworkParameters {
             return BSafeNetLT2Params.get();
         } else if (pmtProtocolId.equals(PAYMENT_PROTOCOL_ID_BSAFENETLT3)) {
             return BSafeNetLT3Params.get();
+        } else if (pmtProtocolId.equals(PAYMENT_PROTOCOL_ID_BSAFENETLT4)) {
+            return BSafeNetLT4Params.get();
+        } else if (pmtProtocolId.equals(PAYMENT_PROTOCOL_ID_BSAFENETLT5)) {
+            return BSafeNetLT5Params.get();
         } else {
             return null;
         }
