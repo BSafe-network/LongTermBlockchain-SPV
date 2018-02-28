@@ -6,7 +6,7 @@ public class BSafeNetLT5Params extends BSafeNetParams {
     public BSafeNetLT5Params() {
         super();
         id = ID_BSAFENETLT5;
-        packetMagic += 0x10L << 24;
+        packetMagic += 0x50L << 24;
         port += 500;
     }
 

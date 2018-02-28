@@ -6,7 +6,7 @@ public class BSafeNetLT4Params extends BSafeNetParams {
     public BSafeNetLT4Params() {
         super();
         id = ID_BSAFENETLT4;
-        packetMagic += 0x10L << 24;
+        packetMagic += 0x40L << 24;
         port += 400;
     }
 
