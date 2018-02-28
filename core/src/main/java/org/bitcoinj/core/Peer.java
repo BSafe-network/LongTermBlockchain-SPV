@@ -557,13 +557,13 @@ public class Peer extends PeerSocketHandler {
         // mode nodes because we can't download the data from them we need to find/verify transactions. Some bogus
         // implementations claim to have a block chain in their services field but then report a height of zero, filter
         // them out here.
-        if (!vPeerVersionMessage.hasBlockChain() ||
+        /*if (!vPeerVersionMessage.hasBlockChain() ||
                 (!params.allowEmptyPeerChain() && vPeerVersionMessage.bestHeight == 0)) {
             // Shut down the channel gracefully.
             log.info("{}: Peer does not have a copy of the block chain.", this);
             close();
             return;
-        }
+        }*/
         if ((vPeerVersionMessage.localServices
                 & VersionMessage.NODE_BITCOIN_CASH) == VersionMessage.NODE_BITCOIN_CASH) {
             log.info("{}: Peer follows an incompatible block chain.", this);
